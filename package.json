@@ -1,0 +1,17 @@
+{
+  "name": "saucelabspoc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/webdriverio/bin/wdio wdio.mocha.conf.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mocha": "^5.2.0",
+    "selenium-standalone": "^6.15.1",
+    "wdio-mocha-framework": "^0.6.2",
+    "webdriverio": "^4.13.1"
+  }
+}
