@@ -1,10 +1,16 @@
 exports.config = {
-
+    user: process.env.SAUCE_USERNAME,
+    key: process.env.SAUCE_ACCESS_KEY,
     /**
      * server configurations
      */
+    // host: 'ondemand.saucelabs.com',
+    // port: 80,
+    // local selenium settings:
     host: '0.0.0.0',
     port: 4444,
+
+    services: ['sauce'],
 
     /**
      * specify test files
@@ -20,8 +26,8 @@ exports.config = {
     /**
      * capabilities
      */
-    capabilities: [{
-        browserName: 'chrome'
+  capabilities: [{
+      browserName: 'chrome', platform: 'Windows 10'
     }],
 
     /**
