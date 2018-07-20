@@ -4,11 +4,11 @@ exports.config = {
     /**
      * server configurations
      */
-    // host: 'ondemand.saucelabs.com',
-    // port: 80,
+    host: 'ondemand.saucelabs.com',
+    port: 80,
     // local selenium settings:
-    host: '0.0.0.0',
-    port: 4444,
+    // host: '0.0.0.0',
+    // port: 4444,
 
     services: ['sauce'],
 
