@@ -2,7 +2,7 @@ var assert = require('assert');
 
 describe('webdriver.io page', function() {
 
-  // it('should be a pending test');
+  it('should be a pending test');
 
   it('should have the right title', function () {
       browser.url('/');
@@ -16,19 +16,19 @@ describe('webdriver.io page', function() {
       const selector = '.icon-tbstnt_icon_play'
       browser.click(selector)
       // console.log('actual', actual)
-      //setTimeout(function(){
+      browser.waitUntil(function(){
         const actual = browser.getUrl();
         const expected = '/movies/'
         const match = actual.match(expected).length > 0
-        assert.equal(match, true)
-      //},1000)
+        return match
+      })
       
     })
-    it('plays freeview movie', function () {
-      const selector = '.icon-tbstnt_icon_play'
-      browser.click(selector)
+    // it('plays freeview movie', function () {
+    //   const selector = '.icon-tbstnt_icon_play'
+    //   browser.click(selector)
 
-    })
+    // })
   })
 
 

@@ -1,3 +1,5 @@
+const timeout = 30000
+
 exports.config = {
     user: process.env.SAUCE_USERNAME,
     key: process.env.SAUCE_ACCESS_KEY,
@@ -26,8 +28,8 @@ exports.config = {
     /**
      * capabilities
      */
-  capabilities: [{
-      browserName: 'chrome', platform: 'Windows 10'
+    capabilities: [{
+      browserName: 'chrome', platform: 'Windows 10', tunnelIdentifier: 'turner_tunnel'
     }],
 
     /**
@@ -37,7 +39,7 @@ exports.config = {
     coloredLogs: true,
     screenshotPath: 'shots',
     baseUrl: 'https://www.tbs.com/',
-    waitforTimeout: 10000,
+    waitforTimeout: timeout,
     framework: 'mocha',
 
     reporters: ['dot'],
@@ -46,7 +48,9 @@ exports.config = {
     },
 
     mochaOpts: {
-        ui: 'bdd'
+        ui: 'bdd',
+        // https://github.com/webdriverio/webdriverio/issues/1172
+        timeout: timeout,
     },
 
     /**
@@ -59,3 +63,5 @@ exports.config = {
         console.log('that\'s it');
     }
 };
+
+

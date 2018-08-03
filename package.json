@@ -4,12 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/webdriverio/bin/wdio wdio.mocha.conf.js"
+    "test": "./node_modules/webdriverio/bin/wdio wdio.mocha.conf.js",
+    "sc": "./node_modules/sauce-connect-launcher/sc/sc-4.4.12-osx/bin/sc"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "mocha": "^5.2.0",
+    "sauce-connect-launcher": "^1.2.4",
     "selenium-standalone": "^6.15.1",
     "wdio-mocha-framework": "^0.6.2",
     "wdio-sauce-service": "^0.4.10",
