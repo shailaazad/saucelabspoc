@@ -5,11 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/webdriverio/bin/wdio wdio.mocha.conf.js",
-    "sc": "./node_modules/sauce-connect-launcher/sc/sc-4.4.12-osx/bin/sc"
+    "sc": "./node_modules/sauce-connect-launcher/sc/sc-4.4.12-osx/bin/sc",
+    "proxy": "Charles -headless -config ${HOME}/Library/Preferences/com.xk72.charles.config &",
+    "stop:proxy": "killall Charles"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "lodash": "^4.17.10",
     "mocha": "^5.2.0",
     "sauce-connect-launcher": "^1.2.4",
     "selenium-standalone": "^6.15.1",
